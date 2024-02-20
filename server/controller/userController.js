@@ -50,7 +50,6 @@ export const update = async (req, res) => {
     if (!userExist) {
       return res.status(404).json({ msg: "User not found!" });
     }
-
     const updatedData = await User.findByIdAndUpdate(id, req.body, {
       new: true,
     });
